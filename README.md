@@ -30,6 +30,7 @@ to JSON null if Invalid or SQL source data is null.
 | Type | Description | Notes |
 |------|-------------|-------|
 | `null.Date` | Nullable `time.Time` | That receive only full-year, month, date and ignore elses. Marshals to JSON null if SQL source data is null. Uses customize `time.Time`'s json & text marshaler for support format YYYY-MM-DD. |
+| `null.CTime` | Nullable `time.Time` | That receive only hour, minute, second and ignore elses. Marshals to JSON null if SQL source data is null. Uses customize `time.Time`'s json & text marshaler for support format hh:mm:ss. It is use name CTime (Customize Time) to differentiate null.Time that support partially support for RFC3339 only time |
 | `null.JSON` | Nullable `[]byte` | Will marshal to JSON null if Invalid. `[]byte{}` input will not produce an Invalid JSON, but `[]byte(nil)` will. This should be used for storing raw JSON in the database. Also has `null.JSON.Marshal` and `null.JSON.Unmarshal` helpers to marshal and unmarshal foreign objects. |
 | `null.Bytes` | Nullable `[]byte` | `[]byte{}` input will not produce an Invalid Bytes, but `[]byte(nil)` will. This should be used for storing binary data (bytes in PSQL for example) in the database. |
 | `null.String` | Nullable `string` | |
