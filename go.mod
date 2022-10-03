@@ -1,3 +1,3 @@
-module github.com/volatiletech/null/v9
+module github.com/mbahjadol/null
 
-go 1.14
+go 1.19
