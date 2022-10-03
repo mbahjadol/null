@@ -7,7 +7,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/volatiletech/null/v9/convert"
+	"github.com/mbahjadol/null/convert"
 )
 
 // JSON is a nullable []byte that contains JSON.
@@ -80,9 +80,9 @@ func (j JSON) Unmarshal(dest interface{}) error {
 //
 // Example if you have a struct with a null.JSON called v:
 //
-// 		{}          -> does not call unmarshaljson: !set & !valid
-// 		{"v": null} -> calls unmarshaljson, set & !valid
-//      {"v": {}}   -> calls unmarshaljson, set & valid (json value is '{}')
+//			{}          -> does not call unmarshaljson: !set & !valid
+//			{"v": null} -> calls unmarshaljson, set & !valid
+//	     {"v": {}}   -> calls unmarshaljson, set & valid (json value is '{}')
 //
 // That's to say if 'null' is passed in at the json level we do not capture that
 // value - instead we set the value-level null flag so that an sql value will

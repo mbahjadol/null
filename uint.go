@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"strconv"
 
-	"github.com/volatiletech/null/v9/convert"
+	"github.com/mbahjadol/null/convert"
 )
 
 // Uint is an nullable uint.

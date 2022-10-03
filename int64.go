@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"strconv"
 
-	"github.com/volatiletech/null/v9/convert"
+	"github.com/mbahjadol/null/convert"
 )
 
 // Int64 is an nullable int64.
