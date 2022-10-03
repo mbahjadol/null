@@ -1,4 +1,4 @@
-## null [![GoDoc](https://godoc.org/github.com/volatiletech/null?status.svg)](https://godoc.org/github.com/volatiletech/null) [![Coverage](http://gocover.io/_badge/github.com/volatiletech/null)](http://gocover.io/github.com/volatiletech/null)
+## null [![GoDoc](https://godoc.org/github.com/mbahjadol/null?status.svg)](https://godoc.org/github.com/mbahjadol/null) [![Coverage](http://gocover.io/_badge/github.com/mbahjadol/null)](http://gocover.io/github.com/mbahjadol/null)
 
 `null` is a library with reasonable options for dealing with nullable SQL and
 JSON values.
@@ -19,7 +19,7 @@ Null used to be versioned with gopkg.in, so once you upgrade to v8 and beyond
 please stop using gopkg.in and ensure you're using go modules.
 
 ```
-go get github.com/volatiletech/null/v9
+go get github.com/mbahjadol/null
 ```
 
 ### Usage
@@ -29,6 +29,7 @@ to JSON null if Invalid or SQL source data is null.
 
 | Type | Description | Notes |
 |------|-------------|-------|
+| `null.Date` | Nullable `time.Time` | That receive only full-year, month, date and ignore elses. Marshals to JSON null if SQL source data is null. Uses customize `time.Time`'s json & text marshaler for support format YYYY-MM-DD. |
 | `null.JSON` | Nullable `[]byte` | Will marshal to JSON null if Invalid. `[]byte{}` input will not produce an Invalid JSON, but `[]byte(nil)` will. This should be used for storing raw JSON in the database. Also has `null.JSON.Marshal` and `null.JSON.Unmarshal` helpers to marshal and unmarshal foreign objects. |
 | `null.Bytes` | Nullable `[]byte` | `[]byte{}` input will not produce an Invalid Bytes, but `[]byte(nil)` will. This should be used for storing binary data (bytes in PSQL for example) in the database. |
 | `null.String` | Nullable `string` | |
@@ -47,7 +48,6 @@ to JSON null if Invalid or SQL source data is null.
 | `null.Uint16` | Nullable `uint16` | |
 | `null.Uint32` | Nullable `uint32` | |
 | `null.Uint64` | Nullable `uint64` | | |
-| `null.Date` | Nullable `time.Time | That receive only full-year, month, date and ignore elses. Marshals to JSON null if SQL source data is null. Uses customize `time.Time`'s json & text marshaler for support format YYYY-MM-DD. |
 
 ### Bugs
 
