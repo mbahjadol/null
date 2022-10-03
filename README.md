@@ -47,6 +47,7 @@ to JSON null if Invalid or SQL source data is null.
 | `null.Uint16` | Nullable `uint16` | |
 | `null.Uint32` | Nullable `uint32` | |
 | `null.Uint64` | Nullable `uint64` | | |
+| `null.Date` | Nullable `time.Time | That receive only full-year, month, date and ignore elses. Marshals to JSON null if SQL source data is null. Uses customize `time.Time`'s json & text marshaler for support format YYYY-MM-DD. |
 
 ### Bugs
 
