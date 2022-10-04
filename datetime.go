@@ -32,7 +32,7 @@ func DateTimeFrom(t time.Time) DateTime {
 	return NewDateTime(t, true)
 }
 
-// DateTimeFromPtr creates a new Date that will be null if t is nil.
+// DateTimeFromPtr creates a new DateTime that will be null if t is nil.
 func DateTimeFromPtr(t *time.Time) DateTime {
 	if t == nil {
 		return NewDateTime(time.Time{}, false)
